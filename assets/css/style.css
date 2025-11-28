@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #1e1e1e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.player {
+    background: #292929;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.cover img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.barra-container {
+    width: 100%;
+    height: 8px;
+    background: #555;
+    border-radius: 5px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.barra-progreso {
+    height: 8px;
+    width: 0%;
+    background: #00ff88;
+    transition: width 0.2s linear;
+}
+
+.controles button {
+    background: #00ff88;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.controles button:hover {
+    background: #00cc66;
+}
