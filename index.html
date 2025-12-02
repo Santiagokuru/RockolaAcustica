@@ -3,34 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Rockcola Acustica</title>
+    <title>Rockola acustica</title>
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
 
-<div class="player">
+    <div class="contenedor">
+        
+        <!-- Login -->
+        <div id="vistaLogin" class="card">
+            <h2>Iniciar Sesión</h2>
+            <form id="formularioLogin">
+                <div class="input">
+                    <label>Usuario / Email</label>
+                    <input type="text" id="usuarioLogin" required>
+                </div>
+                <div class="input">
+                    <label>Contraseña</label>
+                    <input type="password" id="passLogin" required>
+                </div>
+                <button type="submit" class="botonLogin">Entrar</button>
+            </form>
+            <p id="msnLogin" class="message"></p>
+            <p class="mensaje">
+                ¿No tienes cuenta? <a href="#" id="botonRegistro">Regístrate aquí</a>
+            </p>
+        </div>
 
-    <h2 class="titulo">Rockcola Acustica</h2>
-    <p class="subtitulo">Tu reproductor de muscia! </p>
+        <!-- Onboarding -->
+        <div id="vistaOnbording" class="card  oculto">
+            <h2>Crear Cuenta</h2>
+            <form id="formularioOnbording">
+                <div class="input">
+                    <label>Nuevo Usuario</label>
+                    <input type="text" id="usuarioOnbording" required>
+                </div>
+                <div class="input">
+                    <label>Contraseña</label>
+                    <input type="password" id="passOnboarding" required>
+                </div>
+                <button type="submit" class="botonOnbording">Registrar</button>
+            </form>
+            <p id="mensajeOnboarding" class="message"></p>
+            <p class="mensaje">
+                ¿Ya tienes cuenta? <a href="#" id="botonOnbording">Inicia Sesión</a>
+            </p>
+        </div>
 
-    <div class="cover">
-        <img id="imgCancion" src="assets/img/img1.webp" alt="cover">
+        <!-- Acceso -->
+        <div id="vistaAcceso" class="card oculto">
+            <h2>¡Bienvenido!</h2>
+            <p>Has iniciado sesión correctamente.</p>
+            <h3 id="Saludo"></h3>
+            <a href="/pages/Reproductor.html"><button id="BotonAcceso" class="boton">Acceder al Reproductor</button></a>
+        </div>
+
     </div>
 
-    <h3 id="nombreCancion">---</h3>
-
-    <div class="barra-container">
-        <div class="barra-progreso" id="progreso"></div>
-    </div>
-
-    <div class="controles">
-        <button id="anterior">⏮</button>
-        <button id="play">▶</button>
-        <button id="siguiente">⏭</button>
-    </div>
-
-</div>
-
-<script src="/assets/js/script.js"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>

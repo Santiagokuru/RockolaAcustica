@@ -1,19 +1,56 @@
-body {
+
+body{
+    background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
     font-family: Arial, sans-serif;
-    background: #1e1e1e;
-    color: white;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+}
+
+
+.contenedor {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.card{
+    background: rgba(255, 255, 255, 0.627);
+    padding: 2rem;
+    border: #a3a3a4 1px solid;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    color: #262626;
+}
+
+.input {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.oculto {
+    display: none !important;
+}
+
+.usuarioCreado{
+    color: green;
+    font-weight: bold;
+}
+.error{
+    color: red;
+    font-weight: bold;
 }
 
 .player {
-    background: #292929;
+    background: #ffffffd0;
     padding: 20px;
     border-radius: 15px;
-    width: 300px;
+    width: 350px;
     text-align: center;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
@@ -51,4 +88,19 @@ body {
 
 .controles button:hover {
     background: #00cc66;
+}
+
+.logout {
+    margin-top: 20px;
+    text-align: center;
+}
+.logout .boton {
+    background: #dad9d9;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: rgb(78, 77, 77);
+    align-self: start;
 }
