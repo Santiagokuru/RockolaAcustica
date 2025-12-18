@@ -1,4 +1,4 @@
-let arraypersonas = [];
+ste mal let arraypersonas = [];
 
 const usuariosGuardados = localStorage.getItem("ObjetoUsuarios");
 if (usuariosGuardados) {
@@ -28,7 +28,7 @@ const btnAcceso= document.getElementById("botonAcceso");
 const formularioLogin = document.getElementById("formularioLogin");
 const formularioOnbording = document.getElementById("formularioOnbording");
 
-const mensajeLogin = document.getElementById("msnLogin");
+
 const mensajeOnboarding = document.getElementById("mensajeOnboarding");
 const saludoUsuario = document.getElementById("Saludo")
 
@@ -96,10 +96,9 @@ formularioLogin.addEventListener('submit', (evento) => {
         saludoUsuario.textContent = usuarioEncontrado.nombreUsuario;
         cambiarPantalla('acceso');
     } else {
-        // Ejecutamos directamente SweetAlert sin guardarlo en funciones
         Swal.fire({
-            title: '¡Error!',
-            text: 'Usuario o contraseña incorrectos',
+            title: '¡Credenciales incorrectas!',
+            text: 'Ingresa nuevamente el usuario y la contraseña',
             icon: 'error',
             confirmButtonColor: '#3085d6',
             confirmButtonText: 'Reintentar'
@@ -108,4 +107,4 @@ formularioLogin.addEventListener('submit', (evento) => {
         // Opcional: También puedes limpiar los campos para que el usuario intente de nuevo
         formularioLogin.reset();
     }
-}); // Aquí se cierra correctamente el EventListener
+});
