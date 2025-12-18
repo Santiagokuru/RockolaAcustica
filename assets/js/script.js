@@ -96,14 +96,16 @@ formularioLogin.addEventListener('submit', (evento) => {
         saludoUsuario.textContent = usuarioEncontrado.nombreUsuario;
         cambiarPantalla('acceso');
     } else {
-mensajeLogin = () => {
+        // Ejecutamos directamente SweetAlert sin guardarlo en funciones
         Swal.fire({
-        title: 'Error!',
-        text: 'Usuario o contraseña incorrectos',
-        icon: 'error',
-        confirmButtonText: 'Entendido'
-    });
-        //mensajeLogin.textContent = "Credenciales incorrectas.";
-        //mensajeLogin.className = "error";
+            title: '¡Error!',
+            text: 'Usuario o contraseña incorrectos',
+            icon: 'error',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Reintentar'
+        });
+
+        // Opcional: También puedes limpiar los campos para que el usuario intente de nuevo
+        formularioLogin.reset();
     }
-});
+}); // Aquí se cierra correctamente el EventListener
