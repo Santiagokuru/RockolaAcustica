@@ -28,7 +28,7 @@ const btnAcceso= document.getElementById("botonAcceso");
 const formularioLogin = document.getElementById("formularioLogin");
 const formularioOnbording = document.getElementById("formularioOnbording");
 
-
+const mensajeLogin = document.getElementById("msnLogin");
 const mensajeOnboarding = document.getElementById("mensajeOnboarding");
 const saludoUsuario = document.getElementById("Saludo")
 
