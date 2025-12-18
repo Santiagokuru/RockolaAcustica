@@ -1,4 +1,4 @@
-ste mal let arraypersonas = [];
+let arraypersonas = [];
 
 const usuariosGuardados = localStorage.getItem("ObjetoUsuarios");
 if (usuariosGuardados) {
