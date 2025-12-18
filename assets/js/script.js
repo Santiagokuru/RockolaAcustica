@@ -96,7 +96,8 @@ formularioLogin.addEventListener('submit', (evento) => {
         saludoUsuario.textContent = usuarioEncontrado.nombreUsuario;
         cambiarPantalla('acceso');
     } else {
-    Swal.fire({
+mensajeLogin = () => {
+        Swal.fire({
         title: 'Error!',
         text: 'Usuario o contraseña incorrectos',
         icon: 'error',
