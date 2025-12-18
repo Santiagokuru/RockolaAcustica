@@ -95,13 +95,13 @@ formularioLogin.addEventListener('submit', (evento) => {
     if (usuarioEncontrado) {
         saludoUsuario.textContent = usuarioEncontrado.nombreUsuario;
         cambiarPantalla('acceso');
-    } else } else {
-           Swal.fire({
-                title: 'Error!',
-                text: 'Do you want to continue',
-                icon: 'error',
-                confirmButtonText: 'Cool'
-            })
+    } else {
+    Swal.fire({
+        title: 'Error!',
+        text: 'Usuario o contraseña incorrectos',
+        icon: 'error',
+        confirmButtonText: 'Entendido'
+    });
         //mensajeLogin.textContent = "Credenciales incorrectas.";
         //mensajeLogin.className = "error";
     }
