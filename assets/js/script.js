@@ -102,8 +102,5 @@ formularioLogin.addEventListener('submit', (evento) => {
             confirmButtonColor: '#3085d6',
             confirmButtonText: 'Reintentar'
         });
-
-        // Opcional: También puedes limpiar los campos para que el usuario intente de nuevo
-        formularioLogin.reset();
-    }
+    };
 });
