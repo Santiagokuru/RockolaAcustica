@@ -5,7 +5,7 @@ if (usuariosGuardados) {
     arraypersonas = JSON.parse(usuariosGuardados);
     console.log("Usuarios cargados desde Storage:", arraypersonas);
 }
-else{
+else {
     console.log("No hay usuarios guardados en localStorage.");
 };
 
@@ -20,9 +20,9 @@ const vistaLogin = document.getElementById("vistaLogin");
 const vistaOnbording = document.getElementById("vistaOnbording");
 const vistaAcceso = document.getElementById("vistaAcceso");
 
-const btnRegistro= document.getElementById("botonRegistro");
-const btnOnbording= document.getElementById("botonOnbording");
-const btnAcceso= document.getElementById("botonAcceso");
+const btnRegistro = document.getElementById("botonRegistro");
+const btnOnbording = document.getElementById("botonOnbording");
+const btnAcceso = document.getElementById("botonAcceso");
 
 
 const formularioLogin = document.getElementById("formularioLogin");
@@ -50,12 +50,12 @@ function cambiarPantalla(nombreVista) {
 
 btnRegistro.addEventListener('click', (evento) => {
     evento.preventDefault();
-    cambiarPantalla('registro'); 
+    cambiarPantalla('registro');
 });
 
 btnOnbording.addEventListener('click', (evento) => {
     evento.preventDefault();
-    cambiarPantalla('login'); 
+    cambiarPantalla('login');
 });
 
 //Onboarding
@@ -69,14 +69,14 @@ formularioOnbording.addEventListener('submit', (evento) => {
 
     if (usuarioExiste) {
         mensajeOnboarding.textContent = "El nombre de usuario ya existe, elige otro nombre.";
-        mensajeOnboarding.className ="error";
+        mensajeOnboarding.className = "error";
     } else {
 
         arraypersonas.push({ nombreUsuario: nuevoUsuario, clave: nuevaClave });
 
         mensajeOnboarding.textContent = "¡Usuario registrado! Ahora inicia sesión.";
         mensajeOnboarding.className = "usuarioCreado";
-        localStorage.setItem("ObjetoUsuarios",JSON.stringify(arraypersonas));
+        localStorage.setItem("ObjetoUsuarios", JSON.stringify(arraypersonas));
 
         console.log("Lista actual de usuarios:", arraypersonas);
     }
@@ -92,8 +92,20 @@ formularioLogin.addEventListener('submit', (evento) => {
     const usuarioEncontrado = arraypersonas.find(u => u.nombreUsuario === usuarioIngresado && u.clave === claveIngresada);
 
     if (usuarioEncontrado) {
-        saludoUsuario.textContent = usuarioEncontrado.nombreUsuario;
-        cambiarPantalla('acceso');
+        Swal.fire({
+            title: "Hola " + usuarioEncontrado.nombreUsuario + "! , deseas ingreasr al reprodcutor?",
+            showDenyButton: true,
+            showCancelButton: false,
+            confirmButtonText: "Si quiero",
+            denyButtonText: `No quiero`,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                    cambiarPantalla('acceso');
+                setTimeout(function () {
+                    window.location.href = "/pages/Reproductor.html";
+                }, 3000);
+            }
+        });
     } else {
         Swal.fire({
             title: '¡Credenciales incorrectas!',
