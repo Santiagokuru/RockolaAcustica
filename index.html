@@ -1,0 +1,65 @@
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Rockola acustica</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        
+        <!-- Login -->
+        <div id="vistaLogin" class="card">
+            <h2>Iniciar Sesión</h2>
+            <form id="formularioLogin">
+                <div class="input">
+                    <label>Usuario / Email</label>
+                    <input type="text" id="usuarioLogin" required>
+                </div>
+                <div class="input">
+                    <label>Contraseña</label>
+                    <input type="password" id="passLogin" required>
+                </div>
+                <button type="submit" class="botonLogin">Entrar</button>
+            </form>
+            <p id="msnLogin" class="message"></p>
+            <p class="mensaje">
+                ¿No tienes cuenta? <a href="#" id="botonRegistro">Regístrate aquí</a>
+            </p>
+        </div>
+
+        <!-- Onboarding -->
+        <div id="vistaOnbording" class="card  oculto">
+            <h2>Crear Cuenta</h2>
+            <form id="formularioOnbording">
+                <div class="input">
+                    <label>Nuevo Usuario</label>
+                    <input type="text" id="usuarioOnbording" required>
+                </div>
+                <div class="input">
+                    <label>Contraseña</label>
+                    <input type="password" id="passOnboarding" required>
+                </div>
+                <button type="submit" class="botonOnbording">Registrar</button>
+            </form>
+            <p id="mensajeOnboarding" class="message"></p>
+            <p class="mensaje">
+                ¿Ya tienes cuenta? <a href="#" id="botonOnbording">Inicia Sesión</a>
+            </p>
+        </div>
+
+        <!-- Acceso -->
+        <div id="vistaAcceso" class="card oculto">
+            <div class="loader"> 
+                <h1 class="h1_load">Cargando...</h1>
+            </div>
+        </div>
+
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
