@@ -1,18 +1,18 @@
 [
     {
+        "nombre": "Apruebeme, por favor",
+        "img": "/assets/img/img8.webp",
+        "archivo": "/assets/audio/apruebeme por favor.webm"
+    },
+    {
+        "nombre": "De vs al deploy",
+        "img": "/assets/img/img7.webp",
+        "archivo": "/assets/audio/De vs al deploy.webm"
+    },
+    {
         "nombre": "Profe Lucas Theme",
         "img": "/assets/img/img1.webp",
         "archivo": "/assets/audio/profe_lucas.webm"
-    },
-    {
-        "nombre": "Crimen",
-        "img": "/assets/img/img2.webp",
-        "archivo": "/assets/audio/crimen.webm"
-    },
-    {
-        "nombre": "Promesas sobre le bidet",
-        "img": "/assets/img/img3.webp",
-        "archivo": "/assets/audio/promesas_sobre_el_bidet.webm"
     },
     {
         "nombre": "Tu amor",
@@ -28,5 +28,15 @@
         "nombre": "Barro Talvez",
         "img": "/assets/img/img6.webp",
         "archivo": "/assets/audio/barro_talvez.webm"
+    },
+    {
+        "nombre": "Crimen",
+        "img": "/assets/img/img2.webp",
+        "archivo": "/assets/audio/crimen.webm"
+    },
+    {
+        "nombre": "Promesas sobre le bidet",
+        "img": "/assets/img/img3.webp",
+        "archivo": "/assets/audio/promesas_sobre_el_bidet.webm"
     }
 ]

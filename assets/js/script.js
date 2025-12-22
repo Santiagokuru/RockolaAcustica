@@ -93,7 +93,7 @@ formularioLogin.addEventListener('submit', (evento) => {
 
     if (usuarioEncontrado) {
         Swal.fire({
-            title: "Hola " + usuarioEncontrado.nombreUsuario + "! , deseas ingreasr al reprodcutor?",
+            title: "Hola " + usuarioEncontrado.nombreUsuario + "! , deseas ingreasar al reprodcutor?",
             showDenyButton: true,
             showCancelButton: false,
             confirmButtonText: "Si quiero",
